@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Customer Management</p>
+        <h1>Customer Dashboard</h1>
+        <p class="hero-text">Track contacts, update details, and keep customer status visible with a clean, modern interface.</p>
+      </div>
+      <div class="hero-badge">Live Dashboard</div>
+    </header>
+
+    <section class="summary-cards">
+      <article class="card">
+        <h3>Total Customers</h3>
+        <p id="totalCount">0</p>
+      </article>
+      <article class="card soft">
+        <h3>Active Customers</h3>
+        <p id="activeCount">0</p>
+      </article>
+      <article class="card soft">
+        <h3>Inactive Customers</h3>
+        <p id="inactiveCount">0</p>
+      </article>
+    </section>
+
+    <form id="customerForm" class="customer-form">
+      <input type="text" id="name" placeholder="Customer Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <button type="submit">Add Customer</button>
+    </form>
+
+    <h2>Customer List</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody id="customerList"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
